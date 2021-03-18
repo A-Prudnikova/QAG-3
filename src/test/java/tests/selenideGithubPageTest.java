@@ -25,7 +25,6 @@ public class selenideGithubPageTest {
     void softAssertions() {
         open("https://github.com/selenide/selenide");
         actions().sendKeys("g", "w").perform();
-        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
         $(byText("SoftAssertions")).click();
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
 
