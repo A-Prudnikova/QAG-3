@@ -17,8 +17,6 @@ public class selenideGithubPageTest {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
-
-
     }
 
     @Test
@@ -27,7 +25,6 @@ public class selenideGithubPageTest {
         actions().sendKeys("g", "w").perform();
         $(byText("SoftAssertions")).click();
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
-
     }
 }
 
